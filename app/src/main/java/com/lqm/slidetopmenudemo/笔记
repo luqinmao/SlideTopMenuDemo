@@ -1,0 +1,16 @@
+滑动置顶菜单实现：
+
+一:
+    最外层是CoordinatorLayout，然后滑动时候要隐藏的控件放CollapsingToolbarLayout里面，
+    NestedScrollView里面放的是置顶后可滑动的控件，然后就可以实现效果了，就是这么简单。
+
+    需要注意的有几点：
+        1.CollapsingToolbarLayout必须设置app:layout_scrollFlags=”scroll”，他才可以滑动。
+        2.NestedScrollView必须设置app:layout_behavior这个属性，他们才会联动。
+        3.NestedScrollView里面如果嵌套listview等可滑动的布局时要重写listview的onmeasures方法。
+
+
+二：
+
+
+
